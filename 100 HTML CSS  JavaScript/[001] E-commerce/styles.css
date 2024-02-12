@@ -1,0 +1,346 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: gray;
+}
+
+nav {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+h1 {
+  margin: 0 2rem;
+  width: 5vw;
+}
+
+.searchContainer {
+  display: flex;
+  align-items: center;
+}
+
+#searchInput {
+  height: 2rem;
+  width: 20vw;
+}
+
+#searchIcon {
+  cursor: pointer;
+}
+
+.menu ul {
+  display: flex;
+}
+
+.menu ul li {
+  list-style: none;
+  margin-right: 1rem;
+}
+
+.menu a:hover {
+  color: rgb(240, 197, 6);
+  transition-duration: 1s;
+}
+
+.MobileMenu {
+  display: none;
+}
+
+#hamburger {
+  display: none;
+}
+
+#cancel {
+  display: none;
+}
+
+.section1 {
+  height: 80vh;
+  width: 70vw;
+  overflow: hidden;
+  margin: auto;
+}
+
+.imgSlider {
+  display: flex;
+  /* float: left; will fill the entire div/container with first element when there are multiple elements inside an container */
+  float: left;
+  /* relative: to slide the pictures in negative values */
+  position: relative;
+  animation-name: slide;
+  animation-duration: 15s;
+  animation-iteration-count: infinite;
+  transition-duration: 4s;
+}
+
+@keyframes slide {
+  0% {
+    left: 0vw;
+  }
+
+  15% {
+    left: 0vw;
+  }
+
+  20% {
+    left: -70vw;
+  }
+
+  32% {
+    left: -70vw;
+  }
+
+  35% {
+    left: -140vw;
+  }
+
+  47% {
+    left: -140vw;
+  }
+
+  50% {
+    left: -210vw;
+  }
+
+  63% {
+    left: -210vw;
+  }
+
+  66% {
+    left: -280vw;
+  }
+
+  79% {
+    left: -280vw;
+  }
+
+  82% {
+    left: -350vw;
+  }
+
+  100% {
+    left: 0vw;
+  }
+}
+
+.imgSlider img {
+  height: 80vh;
+  width: 70vw;
+}
+
+.section2 .container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 100vw;
+  height: max-content;
+  justify-content: center;
+}
+
+.section2 .container .items{
+  margin: 10px;
+  width: 200px;
+  height: 300px;
+  background-color: white;
+  border: 2.5px solid black;
+  border-radius: 12px;
+}
+
+.section2 .container .items .img img {
+  width: 196px;
+  height: 200px;
+  margin: 0;
+  padding: 0;
+  border-radius: 12px;
+  transition-duration: 0.8s;
+}
+
+.section2 .container .items:hover .img img {
+  transform: scale(1.2);
+  transition-duration: 0.8s;
+  border-radius: 12px;
+}
+
+.section2 .container .items .name{
+  text-align: center;
+  background-color: rgb(175, 175, 30);
+  padding: 0.3rem;
+  color: white;
+}
+
+.section2 .container .items .price{
+  color: red;
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.section2 .container .items .info{
+  color: red;
+  padding-left: 1rem;
+}
+
+
+.footer1 {
+  background-color: black;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.socialMedia i{
+  margin: 20px;
+}
+
+.socialMedia i:hover{
+  color: red;
+  transform: translateY(-5px);
+  transition: 1s;
+}
+
+.footer2{
+  background-color: black;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 3rem;
+}
+
+.heading:hover{
+  color: rgb(156, 156, 39);
+}
+
+.footer2 .div:hover{
+  transform: scale(1.05);
+}
+
+.footer3 .copyright{
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+/* Media query for screens narrower than 600px (typical mobile devices) */
+@media (max-width: 950px) {
+  .desktopMenu {
+    display: none;
+  }
+
+  #hamburger {
+    display: block;
+    margin-right: 2rem;
+  }
+
+  hr{
+    width: 80vw;
+    margin: 1rem;
+  }
+
+  h1 {
+    width: 15vw;
+    margin: 0 1rem;
+  }
+
+  #searchInput{
+    width: 55vw;
+  }
+
+  .MobileMenu ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: black;
+    left: 0;
+    top: 0;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    z-index: 1;
+  }
+
+  #cancel {
+    z-index: 2;
+  }
+
+  .section1 {
+    height: 50vh;
+    width: 70vw;
+    overflow: hidden;
+    margin: auto;
+  }
+
+  .imgSlider {
+    display: flex;
+    float: left;
+    position: relative;
+    animation-name: slide;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+    transition-duration: 4s;
+  }
+
+  @keyframes slide {
+    0% {
+      left: 0vw;
+    }
+  
+    15% {
+      left: 0vw;
+    }
+  
+    20% {
+      left: -70vw;
+    }
+  
+    32% {
+      left: -70vw;
+    }
+  
+    35% {
+      left: -140vw;
+    }
+  
+    47% {
+      left: -140vw;
+    }
+  
+    50% {
+      left: -210vw;
+    }
+  
+    63% {
+      left: -210vw;
+    }
+  
+    66% {
+      left: -280vw;
+    }
+  
+    79% {
+      left: -280vw;
+    }
+  
+    82% {
+      left: -350vw;
+    }
+  
+    100% {
+      left: 0vw;
+    }
+  }
+
+  .imgSlider img {
+    height: 50vh;
+    width: 70vw;
+  }
+
+}
